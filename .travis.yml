@@ -1,0 +1,17 @@
+sudo: false
+language: php
+php:
+- '7.0'
+- nightly
+before_install:
+- phpenv config-rm xdebug.ini
+- composer config --global github-oauth.github.com $GITHUB_TOKEN
+install: composer install --no-interaction
+script: make ci
+after_script: bash <(curl -s https://codecov.io/bash)
+env:
+  global:
+    secure: QPV7m9M7VyM4Y7rAWPaYOzdDkA9DaVtZo2Rr4G/0PX1XvHLfcqKtugyFG86W6tVNblZ6n8eMwQAy9fAw7DSY/rgjySgq3zU/D62K0SbFR2llsHp3kVi42F5tGue5J6VXgXRQyBzIl5XHDIVnFT2BNZkvWQyZ/klLp+rB+7VM3XVvdCCXxXMmd5YD22G7eVmggOvqoqvCVemZ/2RdA+Nz+RKsoJTUQ+qGQkRXyFUMaqqNwnfH/0Lu5hy1KK9p4frUTznkSXWfig7gCMwpvnptdcCQdhUBBHFlhOnOcuPL2oRrgW46cJJBDahLlOJSJ2Hzn9EfaPynxJBgd0HChNzMEYGMOxzx02NaymqGrT8FOmDCcjMBBBVr2PTm/WsTC7wPTKmRYd6ShP1Gz1XPPufoUTFbu8wtWOZOZscsVACZtQpNsk3fw7a7db3lAeghXWXK9n126IkewZXSlqrkwFPpjJ71LdBVIl2ir1s7J+WX7yt1sX0BRADLasgxEqUPpLYiu/6/dK9u1jDmI5Gr/kTDzvwIPcaJ7ykch7cBVWNIlbWGxzYRXRRNafYXRCijS4NQTnItlEFJlB6WYCYTvuHLcXDcQMVjkEgUdck7GibifvalPDTuS17In7usw0gO0JZP89qWaK9iawaoentYWR6h4wMq/YWlVMgnxHp+tUEQc6s=
+cache:
+  directories:
+  - $HOME/.composer

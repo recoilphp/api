@@ -1,0 +1,41 @@
+{
+    "name": "recoil/api",
+    "description": "Public Recoil API, for library and application developers.",
+    "require": {
+        "php": "^7"
+    },
+    "require-dev": {
+        "eloquent/asplode": "^2",
+        "eloquent/phony": "^0.13",
+        "friendsofphp/php-cs-fixer": "^1",
+        "peridot-php/leo": "^1",
+        "peridot-php/peridot-code-coverage-reporters": "^2",
+        "peridot-php/peridot": "^1",
+        "recoil/peridot": "^0.2"
+    },
+    "autoload": {
+        "psr-4": { "Recoil\\": "src" }
+    },
+    "autoload-dev": { "psr-4" : { "Recoil\\": "test/src" }},
+    "keywords": [
+        "coroutine",
+        "generator",
+        "event",
+        "async",
+        "asynchronous",
+        "react",
+        "green",
+        "thread",
+        "multitasking",
+        "continuation"
+    ],
+    "homepage": "https://github.com/recoilphp/api",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "James Harris",
+            "email": "james.harris@icecave.com.au",
+            "homepage": "https://github.com/jmalloc"
+        }
+    ]
+}
