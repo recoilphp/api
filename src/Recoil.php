@@ -5,8 +5,10 @@ declare (strict_types = 1); // @codeCoverageIgnore
 namespace Recoil;
 
 use Recoil\Exception\CompositeException;
-use Recoil\Kernel\Api;
+use Recoil\Exception\TerminatedException;
+use Recoil\Exception\TimeoutException;
 use Recoil\Kernel\Strand;
+use Throwable;
 
 /**
  * This class defines the standard Recoil kernel API operations. It contains no
@@ -107,8 +109,9 @@ abstract class Recoil
      * @param float $timeout   The maximum time to allow for execution, in seconds.
      * @param mixed $coroutine The coroutine to execute.
      *
-     * @return mixed     The return value of the coroutine.
-     * @throws Throwable The exception thrown by the coroutine, if any.
+     * @return mixed            The return value of the coroutine.
+     * @throws Throwable        The exception thrown by the coroutine, if any.
+     * @throws TimeoutException The operation has timed out.
      */
     public static function timeout(float $timeout, $coroutine)
     {
@@ -252,8 +255,9 @@ abstract class Recoil
      *
      * @param Strand $strand The strand to adopt.
      *
-     * @return mixed     The value returned by the strand's entry-point coroutine.
-     * @throws Throwable The exception thrown by the strand's entry-point coroutine, if any.
+     * @return mixed               The value returned by the strand's entry-point coroutine.
+     * @throws Throwable           The exception thrown by the strand's entry-point coroutine, if any.
+     * @throws TerminatedException The adopted strand was terminated.
      */
     public static function adopt(Strand $strand)
     {
@@ -332,7 +336,7 @@ abstract class Recoil
      * the operation. The order of the elements in the array matches the order
      * in which the strands exited.
      *
-     * Unlike {@see Api::all()}, {@see list()} can not be used to unpack the
+     * Unlike {@see Recoil::all()}, {@see list()} can not be used to unpack the
      * result directly, as the caller can not predict which of the strands will
      * succeed.
      *

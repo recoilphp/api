@@ -4,64 +4,10 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "741676d263c1ea62ab4b889fdc201269",
-    "content-hash": "98374eae4326fbb6a8833d69e0b11220",
+    "hash": "6b79fc9a6f5432ba106b72d3f0f0a162",
+    "content-hash": "768875dad6962f628f38e1ddb6e855f3",
     "packages": [],
     "packages-dev": [
-        {
-            "name": "eloquent/asplode",
-            "version": "2.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/eloquent/asplode.git",
-                "reference": "2c469048b4bb8948fa2ce68e894626abe1bdf99b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/eloquent/asplode/zipball/2c469048b4bb8948fa2ce68e894626abe1bdf99b",
-                "reference": "2c469048b4bb8948fa2ce68e894626abe1bdf99b",
-                "shasum": ""
-            },
-            "require": {
-                "icecave/isolator": "~2|~3",
-                "php": ">=5.3"
-            },
-            "require-dev": {
-                "eloquent/phony": "dev-develop",
-                "icecave/archer": "dev-develop",
-                "phpunit/phpunit": "^4",
-                "sami/sami": "^3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Eloquent\\Asplode\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Erin Millard",
-                    "email": "ezzatron@gmail.com",
-                    "homepage": "http://ezzatron.com/"
-                }
-            ],
-            "description": "Drop-in exception-based error handling for PHP.",
-            "homepage": "https://github.com/eloquent/asplode",
-            "keywords": [
-                "error",
-                "errorexception",
-                "exception",
-                "failure",
-                "fault",
-                "handler",
-                "handling"
-            ],
-            "time": "2016-04-19 01:21:09"
-        },
         {
             "name": "eloquent/phony",
             "version": "0.13.2",
@@ -240,64 +186,6 @@
             ],
             "description": "A tool to automatically fix PHP code style",
             "time": "2016-07-22 06:46:28"
-        },
-        {
-            "name": "icecave/isolator",
-            "version": "3.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/IcecaveStudios/isolator.git",
-                "reference": "8fad9e64c393238b01b359e01bd7f25dcdb818e4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/IcecaveStudios/isolator/zipball/8fad9e64c393238b01b359e01bd7f25dcdb818e4",
-                "reference": "8fad9e64c393238b01b359e01bd7f25dcdb818e4",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3"
-            },
-            "require-dev": {
-                "icecave/archer": "~1"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-develop": "3.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Icecave\\Isolator\\": "src"
-                },
-                "files": [
-                    "src/register-autoloader.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "James Harris",
-                    "email": "james.harris@icecave.com.au",
-                    "homepage": "https://github.com/jmalloc"
-                }
-            ],
-            "description": "Dependency injection for global functions.",
-            "homepage": "https://github.com/IcecaveStudios/isolator",
-            "keywords": [
-                "Double",
-                "fake",
-                "mock",
-                "phpunit",
-                "stub",
-                "test",
-                "unit"
-            ],
-            "time": "2015-03-27 05:04:19"
         },
         {
             "name": "peridot-php/leo",

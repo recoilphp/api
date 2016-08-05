@@ -30,7 +30,7 @@ describe(Recoil::class, function () {
         ];
 
         foreach ($operations as $name => $arguments) {
-            it($name, function () use ($name, $arguments) {
+            it('::' . $name . '()', function () use ($name, $arguments) {
                 $fn = [Recoil::class, $name];
                 $result = $fn(...$arguments);
                 expect($result)->to->be->an->instanceof(ApiCall::class);
@@ -49,7 +49,7 @@ describe(Recoil::class, function () {
         ];
 
         foreach ($operations as $name) {
-            it($name, function () use ($name, $arguments) {
+            it('::' . $name . '()', function () use ($name, $arguments) {
                 $fn = [Recoil::class, $name];
                 $result = $fn();
                 expect($result)->to->be->an->instanceof(ApiCall::class);
