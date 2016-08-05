@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ae51e01ea87844d0115a0caa9eea286c",
-    "content-hash": "da29c97b126de555c80bcfa35d87d226",
+    "hash": "741676d263c1ea62ab4b889fdc201269",
+    "content-hash": "98374eae4326fbb6a8833d69e0b11220",
     "packages": [],
     "packages-dev": [
         {
@@ -64,16 +64,16 @@
         },
         {
             "name": "eloquent/phony",
-            "version": "0.13.1",
+            "version": "0.13.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/eloquent/phony.git",
-                "reference": "e31db86ab44b3839736f504a81b1ab975c0dc294"
+                "reference": "81eeba86429314cff2dc0ace171ef3258890d492"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/eloquent/phony/zipball/e31db86ab44b3839736f504a81b1ab975c0dc294",
-                "reference": "e31db86ab44b3839736f504a81b1ab975c0dc294",
+                "url": "https://api.github.com/repos/eloquent/phony/zipball/81eeba86429314cff2dc0ace171ef3258890d492",
+                "reference": "81eeba86429314cff2dc0ace171ef3258890d492",
                 "shasum": ""
             },
             "require": {
@@ -135,7 +135,7 @@
                 "stubbing",
                 "test"
             ],
-            "time": "2016-08-02 04:48:26"
+            "time": "2016-08-04 23:21:21"
         },
         {
             "name": "evenement/evenement",
@@ -298,57 +298,6 @@
                 "unit"
             ],
             "time": "2015-03-27 05:04:19"
-        },
-        {
-            "name": "icecave/repr",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/IcecaveStudios/repr.git",
-                "reference": "8a3d2953adf5f464a06e3e2587aeacc97e2bed07"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/IcecaveStudios/repr/zipball/8a3d2953adf5f464a06e3e2587aeacc97e2bed07",
-                "reference": "8a3d2953adf5f464a06e3e2587aeacc97e2bed07",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3"
-            },
-            "require-dev": {
-                "icecave/archer": "~1"
-            },
-            "suggest": {
-                "eloquent/asplode": "Drop-in exception-based error handling."
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Icecave\\Repr\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "James Harris",
-                    "email": "james.harris@icecave.com.au",
-                    "homepage": "https://github.com/jmalloc"
-                }
-            ],
-            "description": "A library for generating string representations of any value, inspired by Python's reprlib library.",
-            "homepage": "https://github.com/IcecaveStudios/repr",
-            "keywords": [
-                "human",
-                "readable",
-                "repr",
-                "representation",
-                "string"
-            ],
-            "time": "2014-07-25 05:44:41"
         },
         {
             "name": "peridot-php/leo",
@@ -781,215 +730,6 @@
                 "tokenizer"
             ],
             "time": "2015-09-15 10:49:45"
-        },
-        {
-            "name": "react/event-loop",
-            "version": "v0.4.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/reactphp/event-loop.git",
-                "reference": "164799f73175e1c80bba92a220ea35df6ca371dd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/event-loop/zipball/164799f73175e1c80bba92a220ea35df6ca371dd",
-                "reference": "164799f73175e1c80bba92a220ea35df6ca371dd",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "suggest": {
-                "ext-event": "~1.0",
-                "ext-libev": "*",
-                "ext-libevent": ">=0.1.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.5-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "React\\EventLoop\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Event loop abstraction layer that libraries can use for evented I/O.",
-            "keywords": [
-                "asynchronous",
-                "event-loop"
-            ],
-            "time": "2016-03-08 02:09:32"
-        },
-        {
-            "name": "react/promise",
-            "version": "v2.4.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/reactphp/promise.git",
-                "reference": "8025426794f1944de806618671d4fa476dc7626f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise/zipball/8025426794f1944de806618671d4fa476dc7626f",
-                "reference": "8025426794f1944de806618671d4fa476dc7626f",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "React\\Promise\\": "src/"
-                },
-                "files": [
-                    "src/functions_include.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jan Sorgalla",
-                    "email": "jsorgalla@gmail.com"
-                }
-            ],
-            "description": "A lightweight implementation of CommonJS Promises/A for PHP",
-            "time": "2016-05-03 17:50:52"
-        },
-        {
-            "name": "recoil/peridot",
-            "version": "0.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/recoilphp/peridot.git",
-                "reference": "678f52be1e1f54e025b8dd4d422c823a55e513f0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/recoilphp/peridot/zipball/678f52be1e1f54e025b8dd4d422c823a55e513f0",
-                "reference": "678f52be1e1f54e025b8dd4d422c823a55e513f0",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7",
-                "recoil/recoil": "^0.5|^0.6"
-            },
-            "require-dev": {
-                "eloquent/phony": "^0.13",
-                "friendsofphp/php-cs-fixer": "^1",
-                "peridot-php/leo": "^1",
-                "peridot-php/peridot": "^1",
-                "peridot-php/peridot-code-coverage-reporters": "^1",
-                "phpunit/php-code-coverage": "^2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Recoil\\Peridot\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "James Harris",
-                    "email": "james.harris@icecave.com.au",
-                    "homepage": "https://github.com/jmalloc"
-                }
-            ],
-            "description": "A Peridot extension that executes tests as Recoil coroutines",
-            "homepage": "https://github.com/recoilphp/peridot",
-            "keywords": [
-                "async",
-                "asynchronous",
-                "coroutine",
-                "generator",
-                "peridot",
-                "recoil",
-                "test",
-                "testing",
-                "unit"
-            ],
-            "time": "2016-07-29 03:50:49"
-        },
-        {
-            "name": "recoil/recoil",
-            "version": "0.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/recoilphp/recoil.git",
-                "reference": "4b24c810b96565f6ab297903a662d87b5aa9eaae"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/recoilphp/recoil/zipball/4b24c810b96565f6ab297903a662d87b5aa9eaae",
-                "reference": "4b24c810b96565f6ab297903a662d87b5aa9eaae",
-                "shasum": ""
-            },
-            "require": {
-                "icecave/repr": "^1",
-                "php": "^7",
-                "react/event-loop": "^0.4",
-                "react/promise": "^2"
-            },
-            "require-dev": {
-                "eloquent/phony": "^0.13",
-                "ext-posix": "*",
-                "friendsofphp/php-cs-fixer": "^1",
-                "hamcrest/hamcrest-php": "^2",
-                "peridot-php/leo": "^1",
-                "peridot-php/peridot": "^1",
-                "peridot-php/peridot-code-coverage-reporters": "^2",
-                "react/dns": "^0.4"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Recoil\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "James Harris",
-                    "email": "james.harris@icecave.com.au",
-                    "homepage": "https://github.com/jmalloc"
-                }
-            ],
-            "description": "A generator-based cooperative multitasking kernel for React.",
-            "homepage": "https://github.com/recoilphp/recoil",
-            "keywords": [
-                "Thread",
-                "async",
-                "asynchronous",
-                "continuation",
-                "coroutine",
-                "event",
-                "generator",
-                "green",
-                "multitasking",
-                "react"
-            ],
-            "time": "2016-07-29 03:45:29"
         },
         {
             "name": "sebastian/diff",

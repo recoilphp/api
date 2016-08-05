@@ -1,6 +1,6 @@
 {
     "name": "recoil/api",
-    "description": "Public Recoil API, for library and application developers.",
+    "description": "Recoil API specification and interfaces.",
     "require": {
         "php": "^7"
     },
@@ -10,8 +10,7 @@
         "friendsofphp/php-cs-fixer": "^1",
         "peridot-php/leo": "^1",
         "peridot-php/peridot-code-coverage-reporters": "^2",
-        "peridot-php/peridot": "^1",
-        "recoil/peridot": "^0.2"
+        "peridot-php/peridot": "^1"
     },
     "autoload": {
         "psr-4": { "Recoil\\": "src" }

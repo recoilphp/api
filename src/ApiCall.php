@@ -2,7 +2,7 @@
 
 declare (strict_types = 1); // @codeCoverageIgnore
 
-namespace Recoil\Kernel;
+namespace Recoil;
 
 /**
  * Please note that this code is not part of the public API. It may be
@@ -15,12 +15,12 @@ final class ApiCall
     /**
      * @param string The operation name, corresponds to the methods in Api.
      */
-    public $name;
+    public $__name;
 
     /**
      * @param array The operation arguments.
      */
-    public $arguments;
+    public $__arguments;
 
     /**
      * @param string    $name      The operation name, corresponds to the methods in Api.
@@ -28,7 +28,7 @@ final class ApiCall
      */
     public function __construct(string $name, ...$arguments)
     {
-        $this->name = $name;
-        $this->arguments = $arguments;
+        $this->__name = $name;
+        $this->__arguments = $arguments;
     }
 }

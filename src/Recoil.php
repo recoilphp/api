@@ -38,7 +38,7 @@ abstract class Recoil
      */
     public static function execute($coroutine)
     {
-        return new ApiCall(__METHOD__, $coroutine);
+        return new ApiCall(__FUNCTION__, $coroutine);
     }
 
     /**
@@ -59,7 +59,7 @@ abstract class Recoil
      */
     public static function callback($coroutine)
     {
-        return new ApiCall(__METHOD__, $coroutine);
+        return new ApiCall(__FUNCTION__, $coroutine);
     }
 
     /**
@@ -68,12 +68,12 @@ abstract class Recoil
      * Allows other strands to execute before returning. By definition, this
      * operation is COOPERATIVE.
      */
-    public static function cooperate(Strand $strand)
+    public static function cooperate()
     {
         static $call;
 
         if ($call === null) {
-            $call = new ApiCall(__METHOD__);
+            $call = new ApiCall(__FUNCTION__);
         }
 
         return $call;
@@ -89,7 +89,7 @@ abstract class Recoil
      */
     public static function sleep(float $interval)
     {
-        return new ApiCall(__METHOD__, $interval);
+        return new ApiCall(__FUNCTION__, $interval);
     }
 
     /**
@@ -112,7 +112,7 @@ abstract class Recoil
      */
     public static function timeout(float $timeout, $coroutine)
     {
-        return new ApiCall(__METHOD__, $timeout, $coroutine);
+        return new ApiCall(__FUNCTION__, $timeout, $coroutine);
     }
 
     /**
@@ -127,7 +127,7 @@ abstract class Recoil
         static $call;
 
         if ($call === null) {
-            $call = new ApiCall(__METHOD__);
+            $call = new ApiCall(__FUNCTION__);
         }
 
         return $call;
@@ -166,7 +166,7 @@ abstract class Recoil
      */
     public static function suspend(callable $suspendFn = null, callable $terminateFn = null)
     {
-        return new ApiCall(__METHOD__, $suspendFn, $terminateFn);
+        return new ApiCall(__FUNCTION__, $suspendFn, $terminateFn);
     }
 
     /**
@@ -179,7 +179,23 @@ abstract class Recoil
         static $call;
 
         if ($call === null) {
-            $call = new ApiCall(__METHOD__);
+            $call = new ApiCall(__FUNCTION__);
+        }
+
+        return $call;
+    }
+
+    /**
+     * Stop the kernel.
+     *
+     * This operation never returns.
+     */
+    public static function stop()
+    {
+        static $call;
+
+        if ($call === null) {
+            $call = new ApiCall(__FUNCTION__);
         }
 
         return $call;
@@ -200,7 +216,7 @@ abstract class Recoil
      */
     public static function link(Strand $strandA, Strand $strandB = null)
     {
-        return new ApiCall(__METHOD__, $strandA, $strandB);
+        return new ApiCall(__FUNCTION__, $strandA, $strandB);
     }
 
     /**
@@ -216,7 +232,7 @@ abstract class Recoil
      */
     public static function unlink(Strand $strandA, Strand $strandB = null)
     {
-        return new ApiCall(__METHOD__, $strandA, $strandB);
+        return new ApiCall(__FUNCTION__, $strandA, $strandB);
     }
 
     /**
@@ -241,7 +257,7 @@ abstract class Recoil
      */
     public static function adopt(Strand $strand)
     {
-        return new ApiCall(__METHOD__, $strand);
+        return new ApiCall(__FUNCTION__, $strand);
     }
 
     /**
@@ -272,7 +288,7 @@ abstract class Recoil
      */
     public static function all(...$coroutines)
     {
-        return new ApiCall(__METHOD__, ...$coroutines);
+        return new ApiCall(__FUNCTION__, ...$coroutines);
     }
 
     /**
@@ -297,7 +313,7 @@ abstract class Recoil
      */
     public static function any(...$coroutines)
     {
-        return new ApiCall(__METHOD__, ...$coroutines);
+        return new ApiCall(__FUNCTION__, ...$coroutines);
     }
 
     /**
@@ -337,7 +353,7 @@ abstract class Recoil
      */
     public static function some(int $count, ...$coroutines)
     {
-        return new ApiCall(__METHOD__, $count, ...$coroutines);
+        return new ApiCall(__FUNCTION__, $count, ...$coroutines);
     }
 
     /**
@@ -360,7 +376,7 @@ abstract class Recoil
      */
     public static function first(...$coroutines)
     {
-        return new ApiCall(__METHOD__, ...$coroutines);
+        return new ApiCall(__FUNCTION__, ...$coroutines);
     }
 
     /**
@@ -393,7 +409,7 @@ abstract class Recoil
         int $minLength = PHP_INT_MAX,
         int $maxLength = PHP_INT_MAX
     ) {
-        return new ApiCall(__METHOD__, $stream, $minLength, $maxLength);
+        return new ApiCall(__FUNCTION__, $stream, $minLength, $maxLength);
     }
 
     /**
@@ -423,7 +439,7 @@ abstract class Recoil
         string $buffer,
         int $length = PHP_INT_MAX
     ) {
-        return new ApiCall(__METHOD__, $stream, $buffer, $length);
+        return new ApiCall(__FUNCTION__, $stream, $buffer, $length);
     }
 
     /**

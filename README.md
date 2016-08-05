@@ -1,4 +1,4 @@
-# Recoil Channel
+# Recoil API
 
 [![Build Status](http://img.shields.io/travis/recoilphp/api/master.svg?style=flat-square)](https://travis-ci.org/recoilphp/api)
 [![Code Coverage](https://img.shields.io/codecov/c/github/recoilphp/api/master.svg?style=flat-square)](https://codecov.io/github/recoilphp/api)
@@ -8,6 +8,8 @@
 Public [Recoil](https://github.com/recoilphp/recoil) API for library and application developers.
 
     composer require recoil/api
+
+This package acts as a specification for the API used to control the coroutine kernel. It is versioned independently to the kernel implementation.
 
 ## Building and testing
 
