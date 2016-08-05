@@ -18,8 +18,10 @@ use Throwable;
  * Each operation may be cooperative, or non-cooperative. Cooperative operations
  * allow the kernel to execute other strands before returning.
  *
- * The return type of each operation describes the value produced the yield
- * statement used to call the operation within a coroutine.
+ * The return and throw annotations in each operation's doc-block describe the
+ * behaviour when the operation is yielded from a coroutine, for example:
+ *
+ *     $returnValue = yield Recoil::suspend();
  *
  * @todo document dispatchable values (don't forget strand, awaitable, etc)
  */
@@ -387,7 +389,7 @@ abstract class Recoil
      * Read data from a stream.
      *
      * A read buffer is filled with incoming data until its length falls between
-     * $minLength and $maxLength, inclusive, or there is no more data to read.
+     * $minLength and $maxLength, inclusive, or there is no more data to read (EOF).
      * $minLength and $maxLength may be equal to fill a fixed-size buffer.
      *
      * Multiple strands may read a single strand. Reads are synchronized such
