@@ -102,8 +102,8 @@ abstract class Recoil
      * The coroutine can be a generator object, generator function, or any
      * dispatchable value as documented above.
      *
-     * The coroutine is executed on its own strand. If the strand does not exit
-     * within the specified time it is terminated.
+     * The coroutine is executed on its own strand. The strand is terminated if
+     * it does not exit within the specified time.
      *
      * This operation is COOPERATIVE. The current strand is suspended until the
      * coroutine returns or throws.
