@@ -4,6 +4,8 @@ declare (strict_types = 1); // @codeCoverageIgnore
 
 namespace Recoil\Kernel\Exception;
 
+use Recoil\Kernel\Strand;
+
 /*
  * A kernel panic has occurred as a result of an unhandled exception in a
  * strand.

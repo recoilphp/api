@@ -20,7 +20,7 @@ interface CompositeException extends Throwable
      * allows unpacking of the result with list() to get the results in
      * pass-order.
      *
-     * @return array<integer, Throwable> The exceptions.
+     * @return array<int, Throwable> The exceptions.
      */
     public function exceptions() : array;
 }

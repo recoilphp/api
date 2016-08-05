@@ -51,7 +51,7 @@ interface Kernel extends Listener
      *
      *     function (KernelPanicException $e)
      *
-     * If the exception was caused by a strand the exception will be the
+     * If the exception was caused by a strand the, exception will be the
      * sub-type StrandException. $e->getPrevious() returns the exception that
      * triggered the call to the exception handler.
      *

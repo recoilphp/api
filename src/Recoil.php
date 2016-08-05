@@ -289,8 +289,8 @@ abstract class Recoil
      *
      * @param mixed $coroutines,... The coroutines to execute.
      *
-     * @return array<integer, mixed> The return values of each coroutine.
-     * @throws Throwable      The exception thrown by the first failing coroutine, if any.
+     * @return array<int, mixed> The return values of each coroutine.
+     * @throws Throwable  The exception thrown by the first failing coroutine, if any.
      */
     public static function all(...$coroutines)
     {
@@ -392,10 +392,10 @@ abstract class Recoil
      * $minLength and $maxLength, inclusive, or there is no more data to read (EOF).
      * $minLength and $maxLength may be equal to fill a fixed-size buffer.
      *
-     * Multiple strands may read a single strand. Reads are synchronized such
-     * that one strand's read operation returns before another strand begins
-     * filling its read buffer. There is no guarantee as to the order in which
-     * strands are granted access to the stream.
+     * Multiple strands may read from a single stream. Reads are synchronized
+     * such that one strand's read operation returns before another strand can
+     * begin filling its read buffer. There is no guarantee as to the order in
+     * which strands are granted access to the stream.
      *
      * This operation is COOPERATIVE.
      *
@@ -424,9 +424,9 @@ abstract class Recoil
      * Data from $buffer is written to the stream until $length bytes have been
      * sent, or the buffer is exhausted.
      *
-     * Multiple strands may write to a single strand. Writes are synchronized
+     * Multiple strands may write to a single stream. Writes are synchronized
      * such that one strand's write operation returns before another strand
-     * begins sending. There is no guarantee as to the order in which strands
+     * can begin sending. There is no guarantee as to the order in which strands
      * are granted access to the stream.
      *
      * This operation is COOPERATIVE.
