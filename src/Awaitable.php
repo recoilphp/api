@@ -2,7 +2,7 @@
 
 declare (strict_types = 1); // @codeCoverageIgnore
 
-namespace Recoil\Kernel;
+namespace Recoil;
 
 /**
  * An unit of work that notifies one or more listeners when complete.

@@ -4,6 +4,9 @@ declare (strict_types = 1); // @codeCoverageIgnore
 
 namespace Recoil\Kernel;
 
+use Recoil\AwaitableProvider;
+use Recoil\Listener;
+
 /**
  * A strand of execution.
  *

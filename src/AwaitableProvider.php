@@ -2,7 +2,7 @@
 
 declare (strict_types = 1); // @codeCoverageIgnore
 
-namespace Recoil\Kernel;
+namespace Recoil;
 
 /**
  * An object that produces an Awaitable object.
