@@ -4,22 +4,22 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6b79fc9a6f5432ba106b72d3f0f0a162",
+    "hash": "c3ca6f467c29306fe8618a198d4014bc",
     "content-hash": "768875dad6962f628f38e1ddb6e855f3",
     "packages": [],
     "packages-dev": [
         {
             "name": "eloquent/phony",
-            "version": "0.13.2",
+            "version": "0.13.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/eloquent/phony.git",
-                "reference": "81eeba86429314cff2dc0ace171ef3258890d492"
+                "reference": "b3ab895c5b959fc6b1085c0b1c3c37d2b7881949"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/eloquent/phony/zipball/81eeba86429314cff2dc0ace171ef3258890d492",
-                "reference": "81eeba86429314cff2dc0ace171ef3258890d492",
+                "url": "https://api.github.com/repos/eloquent/phony/zipball/b3ab895c5b959fc6b1085c0b1c3c37d2b7881949",
+                "reference": "b3ab895c5b959fc6b1085c0b1c3c37d2b7881949",
                 "shasum": ""
             },
             "require": {
@@ -81,7 +81,7 @@
                 "stubbing",
                 "test"
             ],
-            "time": "2016-08-04 23:21:21"
+            "time": "2016-08-07 12:26:56"
         },
         {
             "name": "evenement/evenement",

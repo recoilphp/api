@@ -5,11 +5,27 @@
 [![Code Quality](https://img.shields.io/scrutinizer/g/recoilphp/api/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/recoilphp/api/)
 [![Latest Version](http://img.shields.io/packagist/v/recoil/api.svg?style=flat-square&label=semver)](https://semver.org)
 
-Public [Recoil](https://github.com/recoilphp/recoil) API for library and application developers.
+The public [Recoil](https://github.com/recoilphp/recoil) API, for library and application developers.
 
     composer require recoil/api
 
 This package acts as a specification for the API used to control the coroutine kernel. It is versioned independently to the kernel implementation.
+
+## Defining and invoking coroutines
+
+    @todo
+
+## Documentation conventions
+
+    @todo
+
+## Standard API operations
+
+    @todo
+
+## Dispatchable values
+
+    @todo
 
 ## Building and testing
 

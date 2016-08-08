@@ -1,6 +1,6 @@
 {
     "name": "recoil/api",
-    "description": "Recoil API specification and interfaces.",
+    "description": "The public Recoil API, for library and application developers.",
     "require": {
         "php": "^7"
     },
