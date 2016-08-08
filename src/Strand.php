@@ -2,10 +2,7 @@
 
 declare (strict_types = 1); // @codeCoverageIgnore
 
-namespace Recoil\Kernel;
-
-use Recoil\AwaitableProvider;
-use Recoil\Listener;
+namespace Recoil;
 
 /**
  * A strand of execution.

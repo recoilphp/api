@@ -2,10 +2,9 @@
 
 declare (strict_types = 1); // @codeCoverageIgnore
 
-namespace Recoil\Kernel;
+namespace Recoil;
 
-use Recoil\Kernel\Exception\KernelPanicException;
-use Recoil\Listener;
+use Recoil\Exception\KernelPanicException;
 
 interface Kernel extends Listener
 {

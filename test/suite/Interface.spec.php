@@ -10,21 +10,19 @@ declare (strict_types = 1); // @codeCoverageIgnore
 context('interface definitions', function () {
     $this->interfaces = [
         Recoil\Exception\CompositeException::class,
+        Recoil\Exception\KernelPanicException::class,
+        Recoil\Exception\KernelStoppedException::class,
+        Recoil\Exception\StrandException::class,
         Recoil\Exception\TerminatedException::class,
         Recoil\Exception\TimeoutException::class,
-
-        Recoil\Kernel\Exception\KernelPanicException::class,
-        Recoil\Kernel\Exception\KernelStoppedException::class,
-        Recoil\Kernel\Exception\StrandException::class,
-
-        Recoil\Kernel\Kernel::class,
-        Recoil\Kernel\Strand::class,
-        Recoil\Kernel\StrandTrace::class,
 
         Recoil\Awaitable::class,
         Recoil\AwaitableProvider::class,
         Recoil\CoroutineProvider::class,
+        Recoil\Kernel::class,
         Recoil\Listener::class,
+        Recoil\Strand::class,
+        Recoil\StrandTrace::class,
     ];
 
     $this->whitelist = array_merge($this->interfaces, [

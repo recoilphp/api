@@ -4,7 +4,6 @@ declare (strict_types = 1); // @codeCoverageIgnore
 
 namespace Recoil;
 
-use Recoil\Kernel\Strand;
 use Throwable;
 
 /**

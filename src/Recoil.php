@@ -8,7 +8,6 @@ use Generator;
 use Recoil\Exception\CompositeException;
 use Recoil\Exception\TerminatedException;
 use Recoil\Exception\TimeoutException;
-use Recoil\Kernel\Strand;
 use Throwable;
 
 /**

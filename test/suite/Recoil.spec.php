@@ -5,7 +5,6 @@ declare (strict_types = 1); // @codeCoverageIgnore
 namespace Recoil;
 
 use Eloquent\Phony\Phony;
-use Recoil\Kernel\Strand;
 
 describe(Recoil::class, function () {
 

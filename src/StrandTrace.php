@@ -2,7 +2,7 @@
 
 declare (strict_types = 1); // @codeCoverageIgnore
 
-namespace Recoil\Kernel;
+namespace Recoil;
 
 /**
  * A strand trace is a low-level observer of strand events.
