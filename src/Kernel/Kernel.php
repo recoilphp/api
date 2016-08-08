@@ -5,6 +5,7 @@ declare (strict_types = 1); // @codeCoverageIgnore
 namespace Recoil\Kernel;
 
 use Recoil\Kernel\Exception\KernelPanicException;
+use Recoil\Listener;
 
 interface Kernel extends Listener
 {
