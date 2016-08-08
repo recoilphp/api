@@ -5,25 +5,25 @@ declare (strict_types = 1); // @codeCoverageIgnore
 namespace Recoil;
 
 /**
- * Please note that this code is not part of the public API. It may be
- * changed or removed at any time without notice.
- *
- * @access private
+ * Holds information about a call to a kernel API operation.
  */
 final class ApiCall
 {
     /**
-     * @param string The operation name, corresponds to the methods in Api.
+     * @var string The operation name.
+     *
+     * This is the name of the operation invoked as a static method on the
+     * {@see Recoil} class.
      */
     public $__name;
 
     /**
-     * @param array The operation arguments.
+     * @var array The arguments to the operation.
      */
     public $__arguments;
 
     /**
-     * @param string    $name      The operation name, corresponds to the methods in Api.
+     * @param string    $name      The operation name.
      * @param mixed,... $arguments The operation arguments.
      */
     public function __construct(string $name, ...$arguments)
