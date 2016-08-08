@@ -9,7 +9,7 @@ The public [Recoil](https://github.com/recoilphp/recoil) API, for library and ap
 
     composer require recoil/api
 
-This package acts as a specification for the API used to control the coroutine kernel. It is versioned independently to the kernel implementation.
+This package acts as a specification for the API used to control the coroutine kernel. It is versioned independently from the kernel implementation.
 
 ## Defining and invoking coroutines
 
