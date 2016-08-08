@@ -4,6 +4,7 @@ declare (strict_types = 1); // @codeCoverageIgnore
 
 namespace Recoil;
 
+use Generator;
 use Recoil\Exception\CompositeException;
 use Recoil\Exception\TerminatedException;
 use Recoil\Exception\TimeoutException;
@@ -18,12 +19,62 @@ use Throwable;
  * Each operation may be cooperative, or non-cooperative. Cooperative operations
  * allow the kernel to execute other strands before returning.
  *
- * The return and throw annotations in each operation's doc-block describe the
- * behaviour when the operation is yielded from a coroutine, for example:
+ * Operations are invoked by yielding the result from a coroutine, for example:
  *
- *     $returnValue = yield Recoil::suspend();
+ *     yield Recoil::sleep(10);
  *
- * @todo document dispatchable values (don't forget strand, awaitable, etc)
+ * Please note that the the return and throw annotations in each operation's
+ * doc-block describe the the result of the yield statement, not the method
+ * itself.
+ *
+ * In addition to the operations in this class there are several other values
+ * that, when yielded from the coroutine, represent a meaningful operation to
+ * the kernel. These "dispatchable values" are as follows:
+ *
+ * - {@see Generator} instances
+ *   Generator objects are assumed to be Recoil coroutines. They are invoked in
+ *   the context of a current strand. This is the standard way to invoke one
+ *   coroutine from within another.
+ *
+ * - {@see CoroutineProvider} instances
+ *   The generator returned by {@see CoroutineProvider::coroutine()} is invoked
+ *   in the context of the current strand, as though it were yielded directly.
+ *
+ * - {@see Awaitable} instances
+ *   The {@see Awaitable::await()} is invoked with the current strand as the
+ *   $listener parameter.
+ *
+ * - {@see AwaitableProvider} instances
+ *   The awaitable returned by {@see AwaitableProvider::awaitable()} is treated
+ *   as though it were yielded directly. Note that {@see Strand} is an awaitable
+ *   provider - yielding a strand waits for that strand to exit.
+ *
+ * - null values
+ *   Equivalent to {@see Recoil::cooperate()}. Yield statements with no value
+ *   are equivalent. Hence, "yield;" is a simple way to instruct the kernel to
+ *   yield control to waiting strands without performing any particular action.
+ *
+ * - integers and floats
+ *   Equivalent to invoking {@see Recoil::sleep()} with the yielded value as the
+ *   $interval parameter.
+ *
+ * - arrays
+ *   Equivalent to invoking {@see Recoil::all()} with each value from the array
+ *   as one of the $coroutine parameters.
+ *
+ * - resource values
+ *   Resources are assumed to be streams. Yielding a stream with no key returns
+ *   data read from the stream, when available. This is equivalent to invoking
+ *   {@see Recoil::read()} on the stream with a $minLength of 1 byte.
+ *
+ *   If the yield statement provides a key, and that key is a string, the
+ *   string is written to the stream. This is equivalent to invoking
+ *   {@see Recoil::write()} on the stream with the key as the $buffer parameter.
+ *
+ * - objects with a "then" method
+ *   The object is assumed to be a promise. The object's "then" method is
+ *   invoked resolve and reject functions that resume the strand. This means a
+ *   strand can await any promise simply by yielding it.
  */
 abstract class Recoil
 {
