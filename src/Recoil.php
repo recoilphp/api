@@ -81,8 +81,10 @@ use Throwable;
  *   The "then" method is invoked with callbacks that resume the current strand
  *   with {@see Strand::send()} or {@see Strand::throw()} when the promise is
  *   resolved or rejected, respectively.
+ *
+ * @abstract
  */
-abstract class Recoil
+final class Recoil
 {
     /**
      * Schedule a coroutine for execution on a new strand.
@@ -514,5 +516,12 @@ abstract class Recoil
     public static function __callStatic(string $name, array $arguments)
     {
         return new ApiCall($name, ...$arguments);
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    private function __construct()
+    {
     }
 }
