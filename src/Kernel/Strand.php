@@ -22,11 +22,6 @@ interface Strand extends Listener, AwaitableProvider
     public function id() : int;
 
     /**
-     * Get the kernel on which the strand is executing.
-     */
-    public function kernel() : Kernel;
-
-    /**
      * Permanently stop the strand from executing.
      *
      * @return null
