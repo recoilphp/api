@@ -74,10 +74,14 @@ use Throwable;
  *   string is written to the stream. This is equivalent to invoking
  *   {@see Recoil::write()} on the stream with the key as the $buffer parameter.
  *
- * - objects with a "then" method
- *   The object is assumed to be a promise. The object's "then" method is
- *   invoked resolve and reject functions that resume the strand. This means a
- *   strand can await any promise simply by yielding it.
+ * - "thennable" objects (objects with a method named "then")
+ *   The object is assumed to be a promise with a "then" method that takes two
+ *   parameters; the "on resolve" and "on reject" callbacks used in typical
+ *   promise implementations.
+ *
+ *   The "then" method is invoked with callbacks that resume the current strand
+ *   with {@see Strand::send()} or {@see Strand::throw()} when the promise is
+ *   resolved or rejected, respectively.
  */
 abstract class Recoil
 {
