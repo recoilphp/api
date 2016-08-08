@@ -27,6 +27,9 @@ use Throwable;
  * doc-block describe the the result of the yield statement, not the method
  * itself.
  *
+ *
+ * Dispatchable Values
+ *
  * In addition to the operations in this class there are several other values
  * that, when yielded from the coroutine, represent a meaningful operation to
  * the kernel. These "dispatchable values" are as follows:
@@ -60,7 +63,7 @@ use Throwable;
  *
  * - arrays
  *   Equivalent to invoking {@see Recoil::all()} with each value from the array
- *   as one of the $coroutine parameters.
+ *   as one of the $dispatchable parameters.
  *
  * - resource values
  *   Resources are assumed to be streams. Yielding a stream with no key returns
@@ -84,8 +87,8 @@ abstract class Recoil
      * The coroutine can be a generator object, generator function, or any
      * dispatchable value as documented above.
      *
-     * This operation is NON-COOPERATIVE, it returns before the new strand begins
-     * execution.
+     * This operation is NON-COOPERATIVE, it returns before the new strand
+     * begins execution.
      *
      * @param mixed $coroutine The coroutine to execute.
      *
