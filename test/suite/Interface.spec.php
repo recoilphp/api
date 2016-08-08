@@ -11,7 +11,6 @@ context('interface definitions', function () {
     $this->interfaces = [
         Recoil\Exception\CompositeException::class,
         Recoil\Exception\KernelPanicException::class,
-        Recoil\Exception\KernelStoppedException::class,
         Recoil\Exception\StrandException::class,
         Recoil\Exception\TerminatedException::class,
         Recoil\Exception\TimeoutException::class,
