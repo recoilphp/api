@@ -4,7 +4,7 @@ declare (strict_types = 1); // @codeCoverageIgnore
 
 namespace Recoil;
 
-use Recoil\Exception\KernelPanicException;
+use Recoil\Exception\PanicException;
 
 interface Kernel extends Listener
 {
@@ -20,7 +20,7 @@ interface Kernel extends Listener
      * @see Kernel::setExceptionHandler()
      *
      * @return null
-     * @throws KernelPanicException An unhandled exception has stopped the kernel.
+     * @throws PanicException An unhandled exception has stopped the kernel.
      */
     public function run();
 
@@ -49,10 +49,12 @@ interface Kernel extends Listener
      *
      * The handler function signature is:
      *
-     *     function (KernelPanicException $e)
+     *     function (PanicException $exception)
      *
-     * If the exception was caused by a strand the, exception will be the
-     * sub-type StrandException. $e->getPrevious() returns the exception that
+     * For exceptions caused by a strand, $exception is an instance of
+     * {@see StrandException}; otherwise, it is a {@see KernelException}.
+     *
+     * {@see PanicException::getPrevious()} returns the exception that
      * triggered the call to the exception handler.
      *
      * If the exception handler is unable to handle the exception it can simply

@@ -4,8 +4,6 @@ declare (strict_types = 1); // @codeCoverageIgnore
 
 namespace Recoil\Exception;
 
-use Throwable;
-
 /**
  * A kernel panic has occurred.
  *
@@ -13,8 +11,9 @@ use Throwable;
  * was not handled by the kernel's exception handler (or no exception handler
  * was installed).
  *
+ * @see KernelException
  * @see StrandException
  */
-interface KernelPanicException extends Throwable
+interface PanicException extends RecoilException
 {
 }
