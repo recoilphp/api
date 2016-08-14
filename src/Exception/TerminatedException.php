@@ -15,7 +15,7 @@ class TerminatedException extends RuntimeException implements RecoilException
     /**
      * Create a terminated exception.
      *
-     * @param Strand The terminated strand.
+     * @param Strand $strand The terminated strand.
      */
     public static function create(Strand $strand) : TerminatedException
     {
