@@ -1,31 +1,30 @@
 <?php
 
-declare (strict_types = 1); // @codeCoverageIgnore
+declare(strict_types=1); // @codeCoverageIgnore
 
 namespace Recoil;
 
 use Eloquent\Phony\Phony;
 
 describe(Recoil::class, function () {
-
     context('n-ary operations', function () {
         $this->strand = Phony::mock(Strand::class)->get();
 
         $operations = [
-            'execute'  => ['<coroutine>'],
+            'execute' => ['<coroutine>'],
             'callback' => ['<coroutine>'],
-            'sleep'    => [12.3],
-            'timeout'  => [12.3, '<coroutine>'],
-            'suspend'  => [null, null],
-            'link'     => [$this->strand, null],
-            'unlink'   => [$this->strand, null],
-            'adopt'    => [$this->strand],
-            'all'      => ['<coroutine-1>', '<coroutine-2>'],
-            'any'      => ['<coroutine-1>', '<coroutine-2>'],
-            'some'     => [123, '<coroutine-1>', '<coroutine-2>'],
-            'first'    => ['<coroutine-1>', '<coroutine-2>'],
-            'read'     => ['<stream>', 123, 456],
-            'write'    => ['<stream>', '<buffer>', 123],
+            'sleep' => [12.3],
+            'timeout' => [12.3, '<coroutine>'],
+            'suspend' => [null, null],
+            'link' => [$this->strand, null],
+            'unlink' => [$this->strand, null],
+            'adopt' => [$this->strand],
+            'all' => ['<coroutine-1>', '<coroutine-2>'],
+            'any' => ['<coroutine-1>', '<coroutine-2>'],
+            'some' => [123, '<coroutine-1>', '<coroutine-2>'],
+            'first' => ['<coroutine-1>', '<coroutine-2>'],
+            'read' => ['<stream>', 123, 456],
+            'write' => ['<stream>', '<buffer>', 123],
         ];
 
         foreach ($operations as $name => $arguments) {
@@ -66,5 +65,4 @@ describe(Recoil::class, function () {
         expect($result->__name)->to->equal('aNonStandardOperation');
         expect($result->__arguments)->to->equal([1, 2, 3]);
     });
-
 });
