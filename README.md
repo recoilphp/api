@@ -14,5 +14,5 @@ This package provides a set of interfaces used to develop asynchronous PHP
 software using coroutines in a manner that is portable across Recoil kernel
 implementations and versions.
 
-For complete documentation on the public API for application developers,
-please see the [Recoil class](src/Recoil.php).
+For complete documentation of the standard API operations, please see the
+[Recoil class](src/Recoil.php).
