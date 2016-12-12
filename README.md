@@ -15,4 +15,4 @@ software using coroutines in a manner that is portable across Recoil kernel
 implementations and versions.
 
 For complete documentation on the public API for application developers,
-please see the [Recoil](src/Recoil.php) class.
+please see the [Recoil class](src/Recoil.php).
