@@ -14,7 +14,7 @@ class TimeoutException extends RuntimeException implements RecoilException
     /**
      * Create a timeout exception.
      *
-     * @param float $timeout The maximum time to allowed for execution, in seconds.
+     * @param float $timeout The maximum time allowed for execution, in seconds.
      */
     public static function create(float $timeout) : TimeoutException
     {
@@ -32,7 +32,7 @@ class TimeoutException extends RuntimeException implements RecoilException
      *
      * @see TimeoutException::create()
      *
-     * @param float $timeout The maximum time to allowed for execution, in seconds.
+     * @param float $timeout The maximum time allowed for execution, in seconds.
      */
     public function __construct(float $timeout)
     {

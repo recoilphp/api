@@ -261,6 +261,9 @@ final class Recoil
     /**
      * Stop the kernel.
      *
+     * There is no guarantee that the kernel will stop immediately, therefore
+     * this operation is COOPERATIVE.
+     *
      * This operation never returns.
      */
     public static function stop()
@@ -318,7 +321,7 @@ final class Recoil
      * handler is NOT invoked. It is the caller's responsibility to handle
      * such failures.
      *
-     * A strand may only be adopted one. The kernel behaviour is undefined if a
+     * A strand may only be adopted once. The kernel behaviour is undefined if a
      * strand is adopted multiple times.
      *
      * By definition, this operation is COOPERATIVE.
@@ -337,7 +340,7 @@ final class Recoil
     /**
      * Execute multiple coroutines concurrently and wait for them all to return.
      *
-     * The coroutines can be a generator objects, generator functions, or any
+     * The coroutines can be generator objects, generator functions, or any
      * dispatchable value as documented above.
      *
      * Each coroutine is executed on its own strand. If any one of the strands
@@ -369,7 +372,7 @@ final class Recoil
      * Execute multiple coroutines concurrently and wait for any one of them to
      * return.
      *
-     * The coroutines can be a generator objects, generator functions, or any
+     * The coroutines can be generator objects, generator functions, or any
      * dispatchable value as documented above.
      *
      * Each coroutine is executed on its own strand. If any one of the strands
@@ -394,7 +397,7 @@ final class Recoil
      * Execute multiple coroutines concurrently and wait for a subset of them to
      * return.
      *
-     * The coroutines can be a generator objects, generator functions, or any
+     * The coroutines can be generator objects, generator functions, or any
      * dispatchable value as documented above.
      *
      * Each coroutine is executed on its own strand. Once the specified number
@@ -434,12 +437,12 @@ final class Recoil
      * Execute multiple coroutines concurrently and wait for any one of them
      * to return or throw an exception.
      *
-     * The coroutines can be a generator objects, generator functions, or any
+     * The coroutines can be generator objects, generator functions, or any
      * dispatchable value as documented above.
      *
      * Each coroutine is executed on its own strand. When any one of the strands
      * exits, all remaining strands are terminated and the return value or
-     * thrown exception is return/thrown from this method.
+     * thrown exception is returned/thrown from this method.
      *
      * This operation is COOPERATIVE.
      *
