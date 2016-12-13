@@ -15,6 +15,8 @@ namespace Recoil;
  *
  * If an exception is thrown from any of the StrandTrace methods the kernel
  * behaviour is undefined.
+ *
+ * @link http://php.net/manual/en/ini.core.php#ini.zend.assertions
  */
 interface StrandTrace
 {
