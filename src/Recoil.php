@@ -51,6 +51,12 @@ use Throwable;
  *   as though it were yielded directly. Note that {@see Strand} is an awaitable
  *   provider - yielding a strand waits for that strand to exit.
  *
+ * - callables
+ *   The callable is invoked, and if its return value is a generator it is
+ *   invoked in the context of the current strand as though it were yielded
+ *   directly. An UnexpectedValueException is thrown if the return value is not
+ *   a generator.
+ *
  * - null values
  *   Equivalent to {@see Recoil::cooperate()}. Yield statements with no value
  *   are equivalent. Hence, "yield;" is a simple way to instruct the kernel to
@@ -81,6 +87,9 @@ use Throwable;
  *   The "then" method is invoked with callbacks that resume the current strand
  *   with {@see Strand::send()} or {@see Strand::throw()} when the promise is
  *   resolved or rejected, respectively.
+ *
+ * An UnexpectedValueException is thrown if any non-dispatchable value is
+ * yielded from a coroutine.
  *
  * @abstract
  */

@@ -37,6 +37,9 @@ interface Kernel extends Listener
      * Execution begins when the kernel is run; or, if called from within a
      * strand, when that strand cooperates.
      *
+     * The coroutine can be a generator object, generator function, or any
+     * dispatchable value as documented in {@see Recoil}.
+     *
      * @param mixed $coroutine The coroutine to execute.
      */
     public function execute($coroutine) : Strand;

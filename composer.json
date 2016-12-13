@@ -5,7 +5,7 @@
         "php": "^7"
     },
     "require-dev": {
-        "eloquent/phony": "^0.13",
+        "eloquent/phony": "^0.14",
         "friendsofphp/php-cs-fixer": "^1",
         "peridot-php/leo": "^1",
         "peridot-php/peridot": "^1",
