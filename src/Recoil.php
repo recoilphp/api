@@ -288,7 +288,7 @@ final class Recoil
      * This operation is NON-COOPERATIVE.
      *
      * @param Strand      $strandA The first strand to link.
-     * @param Strand|null $strandB The first strand to link (null = current strand).
+     * @param Strand|null $strandB The second strand to link (null = current strand).
      */
     public static function link(Strand $strandA, Strand $strandB = null)
     {
@@ -304,7 +304,7 @@ final class Recoil
      * This operation is NON-COOPERATIVE.
      *
      * @param Strand      $strandA The first strand to unlink.
-     * @param Strand|null $strandB The first strand to unlink (null = current strand).
+     * @param Strand|null $strandB The second strand to unlink (null = current strand).
      */
     public static function unlink(Strand $strandA, Strand $strandB = null)
     {
