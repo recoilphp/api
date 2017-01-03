@@ -35,5 +35,8 @@
             "email": "james.harris@icecave.com.au",
             "homepage": "https://github.com/jmalloc"
         }
-    ]
+    ],
+    "config": {
+        "sort-packages": true
+    }
 }
