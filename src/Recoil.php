@@ -540,14 +540,14 @@ final class Recoil
      *
      * @param array<resource> $read    The set of readable streams.
      * @param array<resource> $read    The set of writable streams.
-     * @param float|null      $timeout The maximum time to wait, in seconds (null = forever).
+     * @param float           $timeout The maximum time to wait, in seconds.
      *
      * @return tuple<array<resource>, array<resource>> A 2-tuple of the streams ready for reading and writing.
      */
     public static function select(
         array $read,
         array $write,
-        float $timeout = null
+        float $timeout = INF
     ) {
         return new ApiCall(__FUNCTION__, $read, $write, $timeout);
     }
