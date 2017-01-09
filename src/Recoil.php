@@ -523,13 +523,13 @@ final class Recoil
      * Wait for one or more streams to become readable or writable.
      *
      * This operation blocks until one or more of the given streams becomes
-     * ready for reading or writing, or the timeout period elapses.
+     * ready for reading or writing.
      *
      * It is a coroutine-based analog to the built-in {@see stream_select()}
      * function.
      *
-     * Behaviour is undefined when a given stream is passed to read(), write()
-     * or select() concurrently.
+     * Behaviour is undefined when a given stream is passed to read() or write()
+     * and select() concurrently.
      *
      * This operation is COOPERATIVE.
      *
@@ -538,18 +538,14 @@ final class Recoil
      *
      * @see stream_set_blocking()
      *
-     * @param array<resource> $read    The set of readable streams.
-     * @param array<resource> $read    The set of writable streams.
-     * @param float           $timeout The maximum time to wait, in seconds.
+     * @param array<resource> $read The set of readable streams.
+     * @param array<resource> $read The set of writable streams.
      *
      * @return tuple<array<resource>, array<resource>> A 2-tuple of the streams ready for reading and writing.
      */
-    public static function select(
-        array $read,
-        array $write,
-        float $timeout = INF
-    ) {
-        return new ApiCall(__FUNCTION__, $read, $write, $timeout);
+    public static function select(array $read, array $write)
+    {
+        return new ApiCall(__FUNCTION__, $read, $write);
     }
 
     /**
