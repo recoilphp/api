@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.0-alpha.2 (2017-01-09)
+
+- **[NEW]** Add `select()` operation
+
 ## 1.0.0-alpha.1 (2016-12-14)
 
 - Minor documentation edits
