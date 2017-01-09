@@ -25,6 +25,7 @@ describe(Recoil::class, function () {
             'first' => ['<coroutine-1>', '<coroutine-2>'],
             'read' => ['<stream>', 123, 456],
             'write' => ['<stream>', '<buffer>', 123],
+            'select' => [['<stream-1>'], ['<stream-2>']],
         ];
 
         foreach ($operations as $name => $arguments) {
