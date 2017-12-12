@@ -348,7 +348,8 @@ final class Recoil
      * exception is thrown.
      *
      * Otherwise, the return value is an associative array containing the return
-     * values of each coroutine.
+     * values of each coroutine. If no coroutines are provided, the return value
+     * is an empty array.
      *
      * The array keys correspond to the order that the coroutines are passed to
      * the operation. The order of the elements in the array matches the order
@@ -356,7 +357,7 @@ final class Recoil
      * array with {@see list()} (which uses the keys), while still being able to
      * tell the exit order if necessary.
      *
-     * This operation is COOPERATIVE.
+     * This operation is COOPERATIVE, even if no coroutines are provided.
      *
      * @param mixed $coroutines,... The coroutines to execute.
      *
@@ -381,7 +382,9 @@ final class Recoil
      *
      * If all of the strands fail, a {@see CompositeException} is thrown.
      *
-     * This operation is COOPERATIVE.
+     * If no coroutines are provided, the return value is null.
+     *
+     * This operation is COOPERATIVE, even if no coroutines are provided.
      *
      * @param mixed $coroutines,... The coroutines to execute.
      *
@@ -417,10 +420,10 @@ final class Recoil
      * number of strands to succeed, all remaining strands are terminated and
      * a {@see CompositeException} is thrown.
      *
-     * The specified count must be between 1 and the number of provided
+     * The specified count must be between 0 and the number of provided
      * coroutines, inclusive.
      *
-     * This operation is COOPERATIVE.
+     * This operation is COOPERATIVE, even if no coroutines are provided.
      *
      * @param int   $count          The required number of successful strands.
      * @param mixed $coroutines,... The coroutines to execute.
@@ -444,7 +447,9 @@ final class Recoil
      * exits, all remaining strands are terminated and the return value or
      * thrown exception is returned/thrown from this method.
      *
-     * This operation is COOPERATIVE.
+     * If no coroutines are provided, the return value is null.
+     *
+     * This operation is COOPERATIVE, even if no coroutines are provided.
      *
      * @param mixed $coroutines,... The coroutines to execute.
      *
