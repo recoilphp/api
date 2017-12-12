@@ -1,6 +1,6 @@
 # License
 
-**© 2013-2016, [James Harris](https://github.com/jmalloc)**
+**© 2013-2017, [James Harris](https://github.com/jmalloc)**
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
