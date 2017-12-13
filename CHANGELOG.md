@@ -1,6 +1,6 @@
 # Changelog
 
-## Next Release
+## 1.0.1 (2017-12-13)
 
 - **[IMPROVED]** Clarified behaviour of `all()`, `any()`, `some()` and `first()`
   when no coroutines are provided
