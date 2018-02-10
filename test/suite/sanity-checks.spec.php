@@ -74,7 +74,7 @@ context('sanity checks', function () {
 
                     $returnType = $method->getReturnType();
                     expect($returnType)->not->to->be->null;
-                    expect((string) $returnType)->to->equal($reflector->getName());
+                    expect((string) $returnType)->to->equal('self');
                 });
             });
         }
