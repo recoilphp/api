@@ -13,5 +13,5 @@ namespace Recoil;
  */
 interface AwaitableProvider
 {
-    public function awaitable() : Awaitable;
+    public function awaitable(): Awaitable;
 }

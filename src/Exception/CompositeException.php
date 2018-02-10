@@ -21,7 +21,7 @@ class CompositeException extends Exception implements RecoilException
      *
      * @array<int, Throwable> The exceptions.
      */
-    public static function create(array $exceptions) : CompositeException
+    public static function create(array $exceptions): self
     {
         return new self($exceptions);
     }
@@ -36,7 +36,7 @@ class CompositeException extends Exception implements RecoilException
      *
      * @return array<int, Throwable> The exceptions.
      */
-    public function exceptions() : array
+    public function exceptions(): array
     {
         return $this->exceptions;
     }

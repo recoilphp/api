@@ -20,7 +20,7 @@ class StrandException extends RuntimeException implements PanicException
      * @param Strand    $strand The strand that caused the panic.
      * @param Throwable $cause  The exception that caused the panic.
      */
-    public static function create(Strand $strand, Throwable $cause) : StrandException
+    public static function create(Strand $strand, Throwable $cause): self
     {
         return new self($strand, $cause);
     }
@@ -28,7 +28,7 @@ class StrandException extends RuntimeException implements PanicException
     /**
      * Get the strand that caused the panic.
      */
-    public function strand() : Strand
+    public function strand(): Strand
     {
         return $this->strand;
     }

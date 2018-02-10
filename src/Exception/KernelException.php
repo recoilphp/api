@@ -17,7 +17,7 @@ class KernelException extends RuntimeException implements PanicException
      *
      * @param Throwable $cause The exception that caused the panic.
      */
-    public static function create(Throwable $cause) : KernelException
+    public static function create(Throwable $cause): self
     {
         return new self($cause);
     }

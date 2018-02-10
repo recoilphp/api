@@ -42,7 +42,7 @@ interface Kernel extends Listener
      *
      * @param mixed $coroutine The coroutine to execute.
      */
-    public function execute($coroutine) : Strand;
+    public function execute($coroutine): Strand;
 
     /**
      * Set a user-defined exception handler function.

@@ -14,5 +14,5 @@ use Generator as Coroutine;
  */
 interface CoroutineProvider
 {
-    public function coroutine() : Coroutine;
+    public function coroutine(): Coroutine;
 }
