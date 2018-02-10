@@ -16,7 +16,7 @@ class TimeoutException extends RuntimeException implements RecoilException
      *
      * @param float $timeout The maximum time allowed for execution, in seconds.
      */
-    public static function create(float $timeout) : TimeoutException
+    public static function create(float $timeout): self
     {
         return new self($timeout);
     }

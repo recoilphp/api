@@ -16,7 +16,7 @@ interface Strand extends Listener, AwaitableProvider
      *
      * Strand IDs are unique within the kernel.
      */
-    public function id() : int;
+    public function id(): int;
 
     /**
      * Permanently stop the strand from executing.
@@ -28,7 +28,7 @@ interface Strand extends Listener, AwaitableProvider
     /**
      * Check if the strand has exited.
      */
-    public function hasExited() : bool;
+    public function hasExited(): bool;
 
     /**
      * Get the current trace for this strand.

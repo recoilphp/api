@@ -17,7 +17,7 @@ class TerminatedException extends RuntimeException implements RecoilException
      *
      * @param Strand $strand The terminated strand.
      */
-    public static function create(Strand $strand) : TerminatedException
+    public static function create(Strand $strand): self
     {
         return new self($strand);
     }
@@ -25,7 +25,7 @@ class TerminatedException extends RuntimeException implements RecoilException
     /**
      * Get the terminated strand.
      */
-    public function strand() : Strand
+    public function strand(): Strand
     {
         return $this->strand;
     }
