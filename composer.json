@@ -2,10 +2,10 @@
     "name": "recoil/api",
     "description": "The public Recoil API, for library and application developers.",
     "require": {
-        "php": "^7"
+        "php": "^7.1"
     },
     "require-dev": {
-        "eloquent/phony": "^2",
+        "eloquent/phony": "^3",
         "friendsofphp/php-cs-fixer": "^2",
         "peridot-php/leo": "^1",
         "peridot-php/peridot": "^1",
@@ -39,7 +39,7 @@
     "config": {
         "sort-packages": true,
         "platform": {
-            "php": "7.0"
+            "php": "7.1"
         }
     }
 }
