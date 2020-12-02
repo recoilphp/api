@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "78c2d5e076b24ce7b7d4d3d090fdfca5",
+    "content-hash": "eb1e7cb139675061d79d312f2637bff1",
     "packages": [],
     "packages-dev": [
         {
@@ -308,33 +308,37 @@
         },
         {
             "name": "eloquent/phony",
-            "version": "3.2.0",
+            "version": "dev-php-8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/eloquent/phony.git",
-                "reference": "18576af37922f797f18fd813152dd3135e09902b"
+                "reference": "05f184ff74a7f8602b22a604084ff8d916f9794e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/eloquent/phony/zipball/18576af37922f797f18fd813152dd3135e09902b",
-                "reference": "18576af37922f797f18fd813152dd3135e09902b",
+                "url": "https://api.github.com/repos/eloquent/phony/zipball/05f184ff74a7f8602b22a604084ff8d916f9794e",
+                "reference": "05f184ff74a7f8602b22a604084ff8d916f9794e",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=7.3"
             },
             "require-dev": {
+                "eloquent/code-style": "^1.0",
+                "eloquent/phpstan-phony": "^0.7",
                 "errors/exceptions": "^0.2",
                 "ext-pdo": "*",
                 "friendsofphp/php-cs-fixer": "^2",
                 "hamcrest/hamcrest-php": "^2",
-                "icecave/semver": "^3",
-                "phpunit/phpunit": "^7 || ^8 <8.3.0 || ^8.3.4"
+                "phpstan/extension-installer": "^1",
+                "phpstan/phpstan": "^0.12",
+                "phpstan/phpstan-phpunit": "^0.12",
+                "phpunit/phpunit": "^9"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0.x-dev"
+                    "dev-master": "4.1.x-dev"
                 }
             },
             "autoload": {
@@ -372,9 +376,9 @@
             ],
             "support": {
                 "issues": "https://github.com/eloquent/phony/issues",
-                "source": "https://github.com/eloquent/phony/tree/3.2.0"
+                "source": "https://github.com/eloquent/phony/tree/php-8"
             },
-            "time": "2019-10-30T00:45:28+00:00"
+            "time": "2020-11-28T03:36:46+00:00"
         },
         {
             "name": "evenement/evenement",
@@ -2617,7 +2621,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "eloquent/phony": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

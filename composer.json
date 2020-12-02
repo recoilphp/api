@@ -5,7 +5,7 @@
         "php": "^7.3|^8"
     },
     "require-dev": {
-        "eloquent/phony": "^3.2",
+        "eloquent/phony": "dev-php-8",
         "friendsofphp/php-cs-fixer": "^2",
         "peridot-php/leo": "^1",
         "peridot-php/peridot": "^1",
