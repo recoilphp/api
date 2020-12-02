@@ -8,7 +8,7 @@ on:
   - cron: 0 14 * * 0
 jobs:
   ci:
-    name: Continuous Integration (PHP v${{ matrix.php }})
+    name: PHP v${{ matrix.php }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
