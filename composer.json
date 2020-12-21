@@ -2,14 +2,13 @@
     "name": "recoil/api",
     "description": "The public Recoil API, for library and application developers.",
     "require": {
-        "php": "^7.3|^8"
+        "php": "^7.3 || ^8"
     },
     "require-dev": {
         "eloquent/phony": "^5",
+        "eloquent/phony-phpunit": "^7",
         "friendsofphp/php-cs-fixer": "^2",
-        "peridot-php/leo": "^1",
-        "peridot-php/peridot": "^1",
-        "peridot-php/peridot-code-coverage-reporters": "^2"
+        "phpunit/phpunit": "^9"
     },
     "autoload": {
         "psr-4": { "Recoil\\": "src" }
@@ -32,7 +31,7 @@
     "authors": [
         {
             "name": "James Harris",
-            "email": "james.harris@icecave.com.au",
+            "email": "mailjamesharris@gmail.com",
             "homepage": "https://github.com/jmalloc"
         }
     ],

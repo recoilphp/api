@@ -1,37 +1,43 @@
-SOURCE = $(shell find src test -type f)
+-include .makefiles/Makefile
+-include .makefiles/pkg/php/v1/Makefile
 
-test: | vendor
-	php -c test/etc/php.ini vendor/bin/peridot
+.makefiles/%:
+	@curl -sfL https://makefiles.dev/v1 | bash /dev/stdin "$@"
 
-coverage: artifacts/tests/coverage/index.html
+# SOURCE = $(shell find src test -type f)
 
-coverage-open: artifacts/tests/coverage/index.html
-	open artifacts/tests/coverage/index.html
+# test: | vendor
+# 	php -c test/etc/php.ini vendor/bin/peridot
 
-lint: $(SOURCE) | vendor
-	@mkdir -p artifacts/
-	vendor/bin/php-cs-fixer fix
+# coverage: artifacts/tests/coverage/index.html
 
-prepare: lint coverage
-	composer validate
-	travis lint
+# coverage-open: artifacts/tests/coverage/index.html
+# 	open artifacts/tests/coverage/index.html
 
-ci: artifacts/tests/coverage/clover.xml
-	php -c test/etc/php.ini -d zend.assertions=-1 vendor/bin/peridot
+# lint: $(SOURCE) | vendor
+# 	@mkdir -p artifacts/
+# 	vendor/bin/php-cs-fixer fix
 
-.PHONY: FORCE test coverage coverage-open lint prepare ci
+# prepare: lint coverage
+# 	composer validate
+# 	travis lint
 
-vendor: composer.lock
-	composer install
+# ci: artifacts/tests/coverage/clover.xml
+# 	php -c test/etc/php.ini -d zend.assertions=-1 vendor/bin/peridot
 
-composer.lock: composer.json
-	composer update
+# .PHONY: FORCE test coverage coverage-open lint prepare ci
 
-artifacts/tests/coverage/index.html: $(SOURCE) | vendor
-	phpdbg -c test/etc/php.ini -qrr vendor/bin/peridot --reporter html-code-coverage --code-coverage-path=$(@D)
+# vendor: composer.lock
+# 	composer install
 
-artifacts/tests/coverage/clover.xml: $(SOURCE) | vendor
-	phpdbg -c test/etc/php.ini -qrr vendor/bin/peridot --reporter clover-code-coverage --code-coverage-path=$@
+# composer.lock: composer.json
+# 	composer update
 
-%.php: FORCE
-	@php -l $@ > /dev/null
+# artifacts/tests/coverage/index.html: $(SOURCE) | vendor
+# 	phpdbg -c test/etc/php.ini -qrr vendor/bin/peridot --reporter html-code-coverage --code-coverage-path=$(@D)
+
+# artifacts/tests/coverage/clover.xml: $(SOURCE) | vendor
+# 	phpdbg -c test/etc/php.ini -qrr vendor/bin/peridot --reporter clover-code-coverage --code-coverage-path=$@
+
+# %.php: FORCE
+# 	@php -l $@ > /dev/null
