@@ -2,7 +2,7 @@
     "name": "recoil/api",
     "description": "The public Recoil API, for library and application developers.",
     "require": {
-        "php": "^7.3 || ^8"
+        "php": ">=7.3"
     },
     "require-dev": {
         "eloquent/phony": "^5",
