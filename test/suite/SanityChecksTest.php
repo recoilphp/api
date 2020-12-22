@@ -34,7 +34,7 @@ class SanityChecksTest extends TestCase
 
         $returnType = $method->getReturnType();
         $this->assertNotNull($returnType);
-        $this->assertEquals('self', (string) $returnType);
+        $this->assertEquals('self', $returnType->getName());
     }
 
     public function exceptions(): array {
@@ -107,11 +107,6 @@ class SanityChecksTest extends TestCase
             return;
         }
 
-        $type = ltrim((string) $type, '?');
-
-        $this->assertContains($type, $this->whitelist());
-        $this->assertTrue(
-            interface_exists($type) || class_exists($type),
-        );
+        $this->assertContains($type->getName(), $this->whitelist());
     }
 }
