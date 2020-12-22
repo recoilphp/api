@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.2 (2020-12-22)
+
+- Add support for PHP 8
+- Drop support for PHP 7.0, 7.1 and 7.2
+
 ## 1.0.1 (2017-12-13)
 
 - **[IMPROVED]** Clarified behaviour of `all()`, `any()`, `some()` and `first()`
