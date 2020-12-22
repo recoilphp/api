@@ -26,6 +26,8 @@ jobs:
       uses: actions/checkout@v1
     - name: Make
       run: make ci
+      env:
+        PHP_CS_FIXER_IGNORE_ENV: "true"
     - name: Upload Coverage Reports
       if: success()
       run: |
