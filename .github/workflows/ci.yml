@@ -8,12 +8,12 @@ on:
   - cron: 0 14 * * 0
 jobs:
   ci:
-    name: Continuous Integration (PHP v${{ matrix.php }})
+    name: PHP v${{ matrix.php }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        php: ['7.1', '7.2', '7.3', '7.4']
+        php: ['7.3', '7.4', '8.0']
     steps:
     - name: Set up PHP
       uses: shivammathur/setup-php@master
@@ -26,6 +26,8 @@ jobs:
       uses: actions/checkout@v1
     - name: Make
       run: make ci
+      env:
+        PHP_CS_FIXER_IGNORE_ENV: "true"
     - name: Upload Coverage Reports
       if: success()
       run: |
